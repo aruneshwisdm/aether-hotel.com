@@ -295,6 +295,13 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-navy);
 }
 
+/* Headings on dark backgrounds inherit color */
+.bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4, .bg-navy h5, .bg-navy h6,
+.bg-navy-light h1, .bg-navy-light h2, .bg-navy-light h3, .bg-navy-light h4, .bg-navy-light h5, .bg-navy-light h6,
+.bg-navy-dark h1, .bg-navy-dark h2, .bg-navy-dark h3, .bg-navy-dark h4, .bg-navy-dark h5, .bg-navy-dark h6 {
+  color: inherit;
+}
+
 h1 {
   font-size: clamp(var(--font-size-4xl), 8vw, var(--font-size-6xl));
   letter-spacing: var(--tracking-tight);

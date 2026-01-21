@@ -30,8 +30,13 @@ export default function TestimonialsSection() {
           light
         />
 
-        <div className="max-w-4xl mx-auto">
-          <div className="relative min-h-[300px] md:min-h-[250px]">
+        <div
+          className="max-w-4xl mx-auto"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Guest testimonials"
+        >
+          <div className="relative min-h-[300px] md:min-h-[250px]" aria-live="polite">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -67,17 +72,19 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex justify-center gap-3 mt-10">
+          <div className="flex justify-center gap-3 mt-10" role="tablist" aria-label="Testimonial navigation">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
+                role="tab"
+                aria-selected={index === currentIndex}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                   index === currentIndex
                     ? 'bg-gold w-8'
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
-                aria-label={`Go to testimonial ${index + 1}`}
+                aria-label={`Go to testimonial ${index + 1} of ${testimonials.length}`}
               />
             ))}
           </div>

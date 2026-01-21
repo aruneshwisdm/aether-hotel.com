@@ -104,9 +104,8 @@ function BookingContent() {
 
   const onSubmit = async (data: BookingFormData) => {
     setIsSubmitting(true);
-    // Simulate submission
+    // Simulate submission - replace with actual backend integration
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log('Booking submitted:', data);
     setConfirmationNumber(generateConfirmationNumber());
     setIsSubmitting(false);
   };

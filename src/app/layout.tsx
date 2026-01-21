@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       'Escape to tranquility at Aether Hotel. Experience boutique luxury nestled in the heart of nature.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'Aether Hotel - Boutique Luxury',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: 'Aether Hotel | Boutique Luxury in Nature',
     description:
       'Escape to tranquility at Aether Hotel. Experience boutique luxury nestled in the heart of nature.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.svg'],
   },
   robots: {
     index: true,
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: '/favicon.svg',
+    apple: '/apple-touch-icon.svg',
   },
   manifest: '/site.webmanifest',
 };

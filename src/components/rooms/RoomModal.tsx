@@ -60,6 +60,9 @@ export default function RoomModal({ room, onClose }: RoomModalProps) {
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-4 md:inset-8 lg:inset-16 bg-white rounded-sm z-[var(--z-modal)] overflow-hidden flex flex-col"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="room-modal-title"
           >
             {/* Close Button */}
             <button
@@ -97,11 +100,14 @@ export default function RoomModal({ room, onClose }: RoomModalProps) {
                 </div>
 
                 {/* Thumbnails */}
-                <div className="flex gap-3">
+                <div className="flex gap-3" role="tablist" aria-label="Room images">
                   {room.images.map((image, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImage(index)}
+                      role="tab"
+                      aria-selected={selectedImage === index}
+                      aria-label={`View image ${index + 1} of ${room.images.length}`}
                       className={`relative aspect-[4/3] w-20 lg:w-24 rounded-sm overflow-hidden transition-all duration-300 ${
                         selectedImage === index
                           ? 'ring-2 ring-gold'
@@ -125,7 +131,7 @@ export default function RoomModal({ room, onClose }: RoomModalProps) {
                 <span className="text-gold text-sm font-medium tracking-[0.2em] uppercase">
                   {room.type}
                 </span>
-                <h2 className="font-serif text-3xl lg:text-4xl text-navy mt-2 mb-4">
+                <h2 id="room-modal-title" className="font-serif text-3xl lg:text-4xl text-navy mt-2 mb-4">
                   {room.name}
                 </h2>
 

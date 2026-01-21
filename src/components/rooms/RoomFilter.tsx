@@ -20,11 +20,17 @@ const filters: { value: FilterOption; label: string }[] = [
 
 export default function RoomFilter({ activeFilter, onFilterChange }: RoomFilterProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-3 mb-12">
+    <div
+      className="flex flex-wrap justify-center gap-3 mb-12"
+      role="tablist"
+      aria-label="Filter rooms by type"
+    >
       {filters.map((filter) => (
         <button
           key={filter.value}
           onClick={() => onFilterChange(filter.value)}
+          role="tab"
+          aria-selected={activeFilter === filter.value}
           className={cn(
             'relative px-6 py-2.5 text-sm font-medium tracking-wide uppercase transition-colors duration-300',
             'focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2',

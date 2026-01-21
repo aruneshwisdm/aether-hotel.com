@@ -38,7 +38,6 @@ export default function ContactPage() {
     setIsSubmitting(true);
     // Simulate form submission - replace with actual Formspree integration
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log('Form submitted:', data);
     setIsSubmitting(false);
     setIsSubmitted(true);
     reset();
