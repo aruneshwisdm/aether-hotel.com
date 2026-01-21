@@ -49,52 +49,53 @@ export default function HeroSection() {
         style={{ opacity }}
         className="relative z-10 container-luxury text-center px-4"
       >
-        <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-block text-gold text-sm md:text-base font-medium tracking-[0.3em] uppercase mb-6"
-        >
-          Welcome to Aether
-        </motion.span>
+        {/* Text backdrop for better readability */}
+        <div className="bg-navy/40 backdrop-blur-sm rounded-2xl px-8 py-12 md:px-16 md:py-16 max-w-4xl mx-auto">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="inline-block text-gold text-sm md:text-base font-medium tracking-[0.3em] uppercase mb-6"
+          >
+            Welcome to Aether
+          </motion.span>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-white mb-6"
-          style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6)' }}
-        >
-          Escape to Tranquility
-        </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-white mb-6"
+          >
+            Escape to Tranquility
+          </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-white text-lg md:text-2xl font-light max-w-2xl mx-auto mb-10"
-          style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.5)' }}
-        >
-          Boutique luxury in the heart of nature
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-white/90 text-lg md:text-2xl font-light max-w-2xl mx-auto mb-10"
+          >
+            Boutique luxury in the heart of nature
+          </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Link href="/rooms">
-            <Button variant="secondary" size="lg" className="border-white text-white hover:bg-white hover:text-navy">
-              Explore Rooms
-            </Button>
-          </Link>
-          <Link href="/booking">
-            <Button variant="primary" size="lg">
-              Book Your Stay
-            </Button>
-          </Link>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <Link href="/rooms">
+              <Button variant="secondary" size="lg" className="border-white text-white hover:bg-white hover:text-navy">
+                Explore Rooms
+              </Button>
+            </Link>
+            <Link href="/booking">
+              <Button variant="primary" size="lg">
+                Book Your Stay
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
       </motion.div>
 
       {/* Scroll Indicator */}
