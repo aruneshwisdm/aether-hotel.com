@@ -41,7 +41,7 @@ export default function HeroSection() {
           }}
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/80" />
       </motion.div>
 
       {/* Content */}
@@ -62,7 +62,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-white mb-6"
+          className="text-white mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
         >
           Escape to Tranquility
         </motion.h1>
@@ -71,7 +71,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-white/80 text-lg md:text-2xl font-light max-w-2xl mx-auto mb-10"
+          className="text-white text-lg md:text-2xl font-light max-w-2xl mx-auto mb-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
         >
           Boutique luxury in the heart of nature
         </motion.p>
